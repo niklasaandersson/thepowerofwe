@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import { getEntrepreneursCall } from './apiCalls'
+import './App.css'
+import Hero from './components/Hero'
+import Agenda from './components/agenda'
+import Entrepreneurs from './components/entrepreneurs'
+import Logo from './components/Logo/Logo'
 
-function App() {
+function App () {
+  const [entrepreneurs, setEntrepreneurs] = useState([])
+
+  useEffect(() => {
+    const getM = async () => {
+      const response = await getEntrepreneursCall()
+      setEntrepreneurs(response.data)
+    }
+    getM()
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className='App'>
+        <Logo />
+        <div class='content'>
+          <Hero />
+          <Agenda />
+          <Entrepreneurs entrepreneurs={entrepreneurs} />
+        </div>
+      </div>
+
+    </>
+  )
 }
 
-export default App;
+export default App
