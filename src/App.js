@@ -26,7 +26,6 @@ function App () {
           <Entrepreneurs entrepreneurs={entrepreneurs} />
         </div>
       </div>
-
     </>
   )
 }

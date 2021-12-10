@@ -23,3 +23,9 @@ h1 {
 .content {
   width: 60%;
 }
+
+@media (max-width: 576px) {
+  .content {
+    width: 95%;
+  }
+}

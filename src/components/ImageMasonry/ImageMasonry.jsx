@@ -29,7 +29,7 @@ export default function ImageMasonry (props) {
         </div>
       </div>
 
-      <Box sx={{ width: 500, marginBottom: '50px' }}>
+      <Box sx={{ marginBottom: '150px' }}>
         <Masonry columns={3} spacing={1}>
           {props.entrepreneurs.map((item, index) => (
             <Stack key={item._id}>
