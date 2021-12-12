@@ -5,7 +5,7 @@ import { SectorTitle } from './Styles'
 function Entrepreneurs ({ entrepreneurs }) {
   return (
     <>
-      <SectorTitle>Meet The Entrepreneurs</SectorTitle>
+      <SectorTitle id='meetTheEntrepreneurs'>Meet The Entrepreneurs</SectorTitle>
       <ImageMasonry entrepreneurs={entrepreneurs} />
     </>
   )

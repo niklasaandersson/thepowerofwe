@@ -5,10 +5,10 @@ import Hero from './components/Hero'
 import Agenda from './components/agenda'
 import Entrepreneurs from './components/entrepreneurs'
 import Logo from './components/Logo/Logo'
+import Footer from './components/Footer/Footer'
 
 function App () {
   const [entrepreneurs, setEntrepreneurs] = useState([])
-
   useEffect(() => {
     const getM = async () => {
       const response = await getEntrepreneursCall()
@@ -25,6 +25,7 @@ function App () {
           <Agenda />
           <Entrepreneurs entrepreneurs={entrepreneurs} />
         </div>
+        <Footer />
       </div>
     </>
   )

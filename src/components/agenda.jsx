@@ -23,7 +23,7 @@ const StyledLiTitle = styled.span`
 function Agenda () {
   return (
     <div>
-      <SectorTitle>Agenda</SectorTitle>
+      <SectorTitle id='agenda'>Agenda</SectorTitle>
       <StyledUl>
         <StyledLi><StyledLiTitle>2:00 - 2:25pm</StyledLiTitle><span>Opening Session</span></StyledLi>
         <StyledLi><StyledLiTitle>2:25 - 3:00pm</StyledLiTitle><span>WE Discussions</span></StyledLi>
