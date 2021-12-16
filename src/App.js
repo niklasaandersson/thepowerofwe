@@ -11,7 +11,7 @@ import ComingSoon from './components/ComingSoon/ComingSoon'
 
 function App () {
   const [entrepreneurs, setEntrepreneurs] = useState([])
-  /*
+
   useEffect(() => {
     const getM = async () => {
       const response = await getEntrepreneursCall()
@@ -19,7 +19,7 @@ function App () {
     }
     getM()
   }, [])
-  */
+
   return (
     <>
       <div className='App'>
@@ -31,7 +31,6 @@ function App () {
               <Hero />
               <Agenda />
               <Entrepreneurs entrepreneurs={entrepreneurs} />
-
             </>}
         </div>
 
