@@ -14,7 +14,7 @@ const ContentDiv = styled.div`
 
   @media (max-width: 669px) {
     flex-direction: column-reverse;
-    height: 100% !important;
+    height: 90% !important;
   }
 `
 
@@ -50,12 +50,19 @@ const TextDiv = styled.div`
   flex-direction: column;
   height: 100%;
 
+  @media (max-width: 669px) {
+    padding-left: 0;
+  }
 
 `
 
 const H1 = styled.h1`
     @media (max-width: 766px) {
     font-size: 2rem
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.5rem
   }
 `
 
