@@ -86,12 +86,11 @@ function ComingSoon () {
         <H1>’The Power of WE: Connecting Across ASEAN’ Event Platform is coming soon…</H1>
         <H1Date>2pm Jan 6 2022 (GMT+7)</H1Date>
 
-        {success
+        {success === true
           ? <button
             type='button'
             class='btn btn-success'
             style={{ borderRadius: '8px', marginTop: '20px' }}
-            disabled
           >
           You are signed up
             </button>
