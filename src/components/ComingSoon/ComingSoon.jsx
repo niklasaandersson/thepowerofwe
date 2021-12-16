@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import logo from '../asset.png'
 
@@ -66,23 +66,48 @@ const H1 = styled.h1`
   }
 `
 
+const H1Date = styled(H1)`
+  color: rgb(42,47,184);
+  font-weight: 700;
+`
+
 function ComingSoon () {
+  const urlParams = new URLSearchParams(window.location.search)
+  const success = urlParams.get('success')
+  console.log(success)
+
   return (
     <ContentDiv>
       <ImgDiv>
         <Img src={logo} />
       </ImgDiv>
       <TextDiv>
+
         <H1>’The Power of WE: Connecting Across ASEAN’ Event Platform is coming soon…</H1>
-        <a href='https://form.jotform.com/213346215659054'>
-          <button
+        <H1Date>2pm Jan 6 2022 (GMT+7)</H1Date>
+
+        {success
+          ? <button
             type='button'
-            class='btn btn-outline-light'
+            class='btn btn-success'
             style={{ borderRadius: '8px', marginTop: '20px' }}
+            disabled
           >
+          You are signed up
+            </button>
+
+          : <>
+            <a href='https://form.jotform.com/213346215659054'>
+              <button
+                type='button'
+                class='btn btn-outline-light'
+                style={{ borderRadius: '8px', marginTop: '20px' }}
+              >
           Sign up for the event
-          </button>
-        </a>
+              </button>
+            </a>
+            </>}
+
       </TextDiv>
     </ContentDiv>
   )
