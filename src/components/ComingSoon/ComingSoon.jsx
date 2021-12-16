@@ -69,6 +69,7 @@ const H1 = styled.h1`
 const H1Date = styled(H1)`
   color: rgb(42,47,184);
   font-weight: 700;
+  margin-top: 15px;
 `
 
 function ComingSoon () {
