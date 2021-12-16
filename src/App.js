@@ -7,8 +7,11 @@ import Entrepreneurs from './components/entrepreneurs'
 import Logo from './components/Logo/Logo'
 import Footer from './components/Footer/Footer'
 
+import ComingSoon from './components/ComingSoon/ComingSoon'
+
 function App () {
   const [entrepreneurs, setEntrepreneurs] = useState([])
+  /*
   useEffect(() => {
     const getM = async () => {
       const response = await getEntrepreneursCall()
@@ -16,16 +19,22 @@ function App () {
     }
     getM()
   }, [])
+  */
   return (
     <>
       <div className='App'>
         <Logo />
         <div class='content'>
-          <Hero />
-          <Agenda />
-          <Entrepreneurs entrepreneurs={entrepreneurs} />
+          {process.env.REACT_APP_COMMING_SOON
+            ? <ComingSoon />
+            : <>
+              <Hero />
+              <Agenda />
+              <Entrepreneurs entrepreneurs={entrepreneurs} />
+
+            </>}
         </div>
-        <Footer />
+
       </div>
     </>
   )
