@@ -85,16 +85,16 @@ function ComingSoon () {
       <TextDiv>
 
         <H1>’The Power of WE: Connecting Across ASEAN’ Event Platform is coming soon…</H1>
-        <H1Date>Jan 20 2022 (GMT+7)</H1Date>
+        <H1Date>Jan 20 2022</H1Date>
 
         {success === 'true'
           ? <button
             type='button'
             class='btn btn-success'
             style={{ borderRadius: '8px', marginTop: '20px' }}
-            >
+          >
           You are signed up
-          </button>
+            </button>
 
           : <>
             <a href='https://form.jotform.com/213346215659054'>
@@ -106,7 +106,7 @@ function ComingSoon () {
           Sign up for the event
               </button>
             </a>
-          </>}
+            </>}
 
       </TextDiv>
     </ContentDiv>
