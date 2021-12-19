@@ -1,0 +1,61 @@
+.p {
+  animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #7c0842;
+  }
+  100% {
+    color: #540a2f;
+  }
+}
+
+.p {
+  -webkit-animation: color-change 2s infinite;
+  -moz-animation: color-change 2s infinite;
+  -o-animation: color-change 2s infinite;
+  -ms-animation: color-change 2s infinite;
+  animation: color-change 2s infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #7c0842;
+  }
+  100% {
+    color: #540a2f;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: #7c0842;
+  }
+  100% {
+    color: #540a2f;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: #7c0842;
+  }
+  100% {
+    color: #540a2f;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: #7c0842;
+  }
+  100% {
+    color: #540a2f;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: #7c0842;
+  }
+  100% {
+    color: #540a2f;
+  }
+}

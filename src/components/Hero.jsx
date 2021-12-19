@@ -7,6 +7,8 @@ import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand, Vietnam } from './Flags'
 
+import './Hero.css'
+
 const H1 = styled.h1`
   font-size: 2.2rem;
 
@@ -45,7 +47,7 @@ function Hero () {
 
       </div>
       <H1Date>Jan 6 2022</H1Date>
-      <p style={{ marginBottom: '10px', color: '#7c0842' }}><small>Click on your country's flag to see start time</small></p>
+      <p className='p' style={{ marginBottom: '10px' }}><small>Click on your country's flag to see start time</small></p>
 
       <div>
 
