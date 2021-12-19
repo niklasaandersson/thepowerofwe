@@ -237,62 +237,63 @@ export default function ImageMasonry ({ entrepreneurs }) {
 
             </div>
           </div>
+          <div style={{ minHeight: '400px', maxWidth: '900px', margin: '0 auto 150px auto' }}>
+            <Box>
+              <Masonry columns={noOfImages} spacing={2}>
+                {displayedEntrepreneurs.map((item, index) => (
+                  <Stack key={item._id}>
+                    <div style={{ position: 'relative' }}>
+                      <div>
+                        <img
+                          src={`${item.imageURL}?w=162&auto=format`}
+                          srcSet={`${item.imageURL}?w=162&auto=format&dpr=2 2x`}
+                          alt={item.title}
+                          loading='lazy'
+                          style={{ borderRadius: '8px', width: '100%' }}
+                        />
+                      </div>
+                      <HooverDiv>
+                        <TextDiv>
+                          <H5Styled>{`${item.firstName} ${item.lastName} `}{getFlag(item.country)}</H5Styled>
+                          <span>{item.companyName}</span>
+                          <span>{item.industry}</span>
+                        </TextDiv>
+                        <SocialDiv>
+                          {item.website &&
+                            <Tooltip title='Website' placement='top-end'>
+                              <a href={'//' + item.website} target='_blank' rel='noopener noreferrer'>
+                                <SocialDivButton>
+                                  <FaDesktop />
+                                </SocialDivButton>
+                              </a>
+                            </Tooltip>}
 
-          <Box sx style={{ margin: '0 auto 150px auto' }}>
-            <Masonry columns={noOfImages} spacing={1}>
-              {displayedEntrepreneurs.map((item, index) => (
-                <Stack key={item._id}>
-                  <div style={{ position: 'relative' }}>
-                    <div>
-                      <img
-                        src={`${item.imageURL}?w=162&auto=format`}
-                        srcSet={`${item.imageURL}?w=162&auto=format&dpr=2 2x`}
-                        alt={item.title}
-                        loading='lazy'
-                        style={{ borderRadius: '8px', width: '100%' }}
-                      />
+                          {item.facebook &&
+                            <Tooltip title='Facebook' placement='top-end'>
+                              <a href={'//' + item.facebook} target='_blank' rel='noopener noreferrer'>
+                                <SocialDivButton>
+                                  <FaFacebookF />
+                                </SocialDivButton>
+                              </a>
+                            </Tooltip>}
+
+                          {item.instagram &&
+                            <Tooltip title='Instagram' placement='top-end'>
+                              <a href={'//' + item.instagram} target='_blank' rel='noopener noreferrer'>
+                                <SocialDivButton>
+                                  <FaInstagram />
+                                </SocialDivButton>
+                              </a>
+                            </Tooltip>}
+                        </SocialDiv>
+                      </HooverDiv>
                     </div>
-                    <HooverDiv>
-                      <TextDiv>
-                        <H5Styled>{`${item.firstName} ${item.lastName} `}{getFlag(item.country)}</H5Styled>
-                        <span>{item.companyName}</span>
-                        <span>{item.industry}</span>
-                      </TextDiv>
-                      <SocialDiv>
-                        {item.website &&
-                          <Tooltip title='Website' placement='top-end'>
-                            <a href={'//' + item.website} target='_blank' rel='noopener noreferrer'>
-                              <SocialDivButton>
-                                <FaDesktop />
-                              </SocialDivButton>
-                            </a>
-                          </Tooltip>}
-
-                        {item.facebook &&
-                          <Tooltip title='Facebook' placement='top-end'>
-                            <a href={'//' + item.facebook} target='_blank' rel='noopener noreferrer'>
-                              <SocialDivButton>
-                                <FaFacebookF />
-                              </SocialDivButton>
-                            </a>
-                          </Tooltip>}
-
-                        {item.instagram &&
-                          <Tooltip title='Instagram' placement='top-end'>
-                            <a href={'//' + item.instagram} target='_blank' rel='noopener noreferrer'>
-                              <SocialDivButton>
-                                <FaInstagram />
-                              </SocialDivButton>
-                            </a>
-                          </Tooltip>}
-                      </SocialDiv>
-                    </HooverDiv>
-                  </div>
-                </Stack>
-              ))}
-            </Masonry>
-          </Box>
-          </>}
+                  </Stack>
+                ))}
+              </Masonry>
+            </Box>
+          </div>
+        </>}
     </>
 
   )
