@@ -173,7 +173,6 @@ export default function ImageMasonry ({ entrepreneurs }) {
     if (size < 535) setNoOfImages(2)
     if (size > 534 && size < 1001) setNoOfImages(3)
     if (size > 1000) setNoOfImages(4)
-    else setNoOfImages(3)
   }, [])
 
   useEffect(() => {
