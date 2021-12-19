@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageMasonry from '../components/ImageMasonry/ImageMasonry'
+import ImageMasonry from './ImageMasonry/ImageMasonry'
 import { SectorTitle } from './Styles'
 
 function Entrepreneurs ({ entrepreneurs }) {

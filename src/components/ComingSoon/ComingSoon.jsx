@@ -4,7 +4,7 @@ import logo from '../asset.png'
 
 const ContentDiv = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   height: 93%;
   padding: 0 5%;
 
@@ -18,7 +18,7 @@ const ContentDiv = styled.div`
   }
 `
 
-const Img = styled.img`
+export const Img = styled.img`
   height: 60vh;
 
   @media (max-width: 669px) {
@@ -27,7 +27,7 @@ const Img = styled.img`
 
 `
 
-const ImgDiv = styled.div`
+export const ImgDiv = styled.div`
   width: 80%;
   display: flex;
   align-items: flex-end;
@@ -43,6 +43,7 @@ const ImgDiv = styled.div`
 `
 
 const TextDiv = styled.div`
+margin-top:50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,12 +53,13 @@ const TextDiv = styled.div`
 
   @media (max-width: 669px) {
     padding-left: 0;
+    margin-bottom: 30px;
   }
 
 `
 
 const H1 = styled.h1`
-    @media (max-width: 766px) {
+    @media (max-width: 850px) {
     font-size: 2rem
   }
 
@@ -66,7 +68,7 @@ const H1 = styled.h1`
   }
 `
 
-const H1Date = styled(H1)`
+export const H1Date = styled(H1)`
   color: rgb(42,47,184);
   font-weight: 700;
   margin-top: 15px;
@@ -90,7 +92,7 @@ function ComingSoon () {
         {success === 'true'
           ? <button
             type='button'
-            class='btn btn-success'
+            className='btn btn-success'
             style={{ borderRadius: '8px', marginTop: '20px' }}
           >
           You are signed up
@@ -100,7 +102,7 @@ function ComingSoon () {
             <a href='https://form.jotform.com/213346215659054'>
               <button
                 type='button'
-                class='btn btn-outline-light'
+                className='btn btn-outline-light'
                 style={{ borderRadius: '8px', marginTop: '20px' }}
               >
           Sign up for the event

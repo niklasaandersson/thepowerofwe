@@ -5,6 +5,7 @@ import { SectorTitle } from './Styles.js'
 const StyledUl = styled.ul`
   display: flex;
   flex-direction: column;
+  padding-inline-start: 0;
 `
 
 const StyledLi = styled.li`
@@ -13,10 +14,15 @@ const StyledLi = styled.li`
   margin-bottom: 10px;
   padding: 10px;
   font-size: 20px;
+
+  @media(max-width:450px) {
+    font-size: 16px;
+  }
+  
 `
 
 const StyledLiTitle = styled.span`
-  width: 35%;
+  width: 50%;
   text-align: left;
 `
 

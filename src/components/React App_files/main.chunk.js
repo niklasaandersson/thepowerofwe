@@ -1,11 +1,11 @@
-(this["webpackJsonpruty"] = this["webpackJsonpruty"] || []).push([["main"],{
+(this.webpackJsonpruty = this.webpackJsonpruty || []).push([['main'], {
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css":
-/*!************************************************************************************************************************!*\
+  /***/ './node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css':
+  /*! ************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./src/App.css ***!
   \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -20,14 +20,14 @@ ___CSS_LOADER_EXPORT___.push([module.i, "html {\n  /* body won't work ¯\\_(ツ)
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
-/***/ }),
+/***/ },
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
-/*!**************************************************************************************************************************!*\
+  /***/ './node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css':
+  /*! **************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
   \**************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -42,14 +42,14 @@ ___CSS_LOADER_EXPORT___.push([module.i, "body {\n  margin: 0;\n  font-family: -a
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/App.css":
-/*!*********************!*\
+  /***/ './src/App.css':
+  /*! *********************!*\
   !*** ./src/App.css ***!
   \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+  /*! no static exports found */
+  /***/ function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
             var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
@@ -134,14 +134,14 @@ if (true) {
 
 module.exports = content.locals || {};
 
-/***/ }),
+/***/ },
 
-/***/ "./src/App.js":
-/*!********************!*\
+  /***/ './src/App.js':
+  /*! ********************!*\
   !*** ./src/App.js ***!
   \********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -296,14 +296,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ "./src/components/HamburgerIcon.jsx":
-/*!******************************************!*\
+  /***/ './src/components/HamburgerIcon.jsx':
+  /*! ******************************************!*\
   !*** ./src/components/HamburgerIcon.jsx ***!
   \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -473,14 +473,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ "./src/components/HeroIrregularContainer.jsx":
-/*!***************************************************!*\
+  /***/ './src/components/HeroIrregularContainer.jsx':
+  /*! ***************************************************!*\
   !*** ./src/components/HeroIrregularContainer.jsx ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -606,14 +606,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ "./src/components/Logo.jsx":
-/*!*********************************!*\
+  /***/ './src/components/Logo.jsx':
+  /*! *********************************!*\
   !*** ./src/components/Logo.jsx ***!
   \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -735,14 +735,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ "./src/components/Nav.jsx":
-/*!********************************!*\
+  /***/ './src/components/Nav.jsx':
+  /*! ********************************!*\
   !*** ./src/components/Nav.jsx ***!
   \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -866,14 +866,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ "./src/index.css":
-/*!***********************!*\
+  /***/ './src/index.css':
+  /*! ***********************!*\
   !*** ./src/index.css ***!
   \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+  /*! no static exports found */
+  /***/ function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
             var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
@@ -958,14 +958,14 @@ if (true) {
 
 module.exports = content.locals || {};
 
-/***/ }),
+/***/ },
 
-/***/ "./src/index.js":
-/*!**********************!*\
+  /***/ './src/index.js':
+  /*! **********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! no exports provided */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1080,14 +1080,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ "./src/reportWebVitals.js":
-/*!********************************!*\
+  /***/ './src/reportWebVitals.js':
+  /*! ********************************!*\
   !*** ./src/reportWebVitals.js ***!
   \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /*! exports provided: default */
+  /***/ function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -1190,14 +1190,14 @@ if (true) {
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
 
-/***/ }),
+/***/ },
 
-/***/ 1:
-/*!**********************************************************************************************************************************************************************************************!*\
+  /***/ 1:
+  /*! **********************************************************************************************************************************************************************************************!*\
   !*** multi (webpack)/hot/dev-server.js ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
   \**********************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+  /*! no static exports found */
+  /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/niklasandersson/Dev/ruty/node_modules/webpack/hot/dev-server.js */"./node_modules/webpack/hot/dev-server.js");
 __webpack_require__(/*! /Users/niklasandersson/Dev/ruty/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js */"./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js");
@@ -1205,7 +1205,7 @@ __webpack_require__(/*! /Users/niklasandersson/Dev/ruty/node_modules/react-dev-u
 module.exports = __webpack_require__(/*! /Users/niklasandersson/Dev/ruty/src/index.js */"./src/index.js");
 
 
-/***/ })
+/***/ }
 
-},[[1,"runtime-main","vendors~main"]]]);
-//# sourceMappingURL=main.chunk.js.map
+}, [[1, 'runtime-main', 'vendors~main']]])
+// # sourceMappingURL=main.chunk.js.map
