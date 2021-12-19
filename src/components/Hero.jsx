@@ -16,6 +16,11 @@ const H1 = styled.h1`
     font-size: 1.2rem;
     font-weight: 700;
   }
+
+  @media(max-width: 355px) {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
   
 `
 
