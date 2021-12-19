@@ -163,22 +163,18 @@ export default function ImageMasonry ({ entrepreneurs }) {
   const [allCountries, setAllCountries] = useState([])
   const [currentCountry, setCurrentCountry] = useState('')
 
-  const [currentSector, setCurrentSector] = useState('')
-
   const [noOfImages, setNoOfImages] = useState(3)
 
-  const size = useWindowSize()
+  let size = 0
+  size = useWindowSize()
 
   useEffect(() => {
-    if (size < 535) setNoOfImages(2)
-    if (size > 534 && size < 1001) setNoOfImages(3)
-    if (size > 1000) setNoOfImages(4)
-  }, [])
-
-  useEffect(() => {
-    if (size < 535) setNoOfImages(2)
-    if (size > 534 && size < 1001) setNoOfImages(3)
-    if (size > 1000) setNoOfImages(4)
+    const windowSetSize = (w) => {
+      if (w < 535) setNoOfImages(2)
+      if (w > 534 && size < 1001) setNoOfImages(3)
+      if (w > 1000) setNoOfImages(4)
+    }
+    windowSetSize(size)
   }, [size])
 
   useEffect(() => {
@@ -236,7 +232,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
 
             </div>
           </div>
-          <div style={{ minHeight: '400px', maxWidth: '900px', margin: '0 auto 80px auto' }}>
+          <div style={{ minHeight: '400px', maxWidth: '900px', margin: '0 auto 80px auto', paddingLeft: '10px' }}>
             <Box>
               <Masonry columns={noOfImages} spacing={2}>
                 {displayedEntrepreneurs.map((item, index) => (
