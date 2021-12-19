@@ -10,6 +10,8 @@ import ComingSoon from './components/ComingSoon/ComingSoon'
 import styled from 'styled-components'
 
 const ContentDiv = styled.div`
+  width: 80%;
+
   @media(max-width: 650px) {
     padding: 0 15px;
     margin-top: 30px;
@@ -40,8 +42,8 @@ function App () {
             : <>
               <Hero />
               <Agenda />
-              {isLoading ? null : <MeetTheEntrepreneurs entrepreneurs={entrepreneurs} />}
-            </>}
+              <MeetTheEntrepreneurs entrepreneurs={entrepreneurs} isLoading={isLoading} />
+              </>}
         </ContentDiv>
 
         <Footer />

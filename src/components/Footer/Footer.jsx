@@ -5,60 +5,114 @@ import { FaEnvelope, FaPhone } from 'react-icons/fa'
 
 const FooterDiv = styled.div`
     font-size: 14px;
-    background-color: #ec5ea5;
+    background-color: #dd3086;
     width: 100%;
-    padding: 10px;
+    padding: 50px 10px 10px 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: rgb(42,47,184);
     font-weight: 300;
-    height: 200px;
+    height: 230px;
 
-    @media(max-width:750px) {
+    @media(max-width:475px) {
       flex-direction: column;
-      height: 370px;
-
+      height: 400px;
     }
+
 `
 
 const LogoDiv = styled.div`
     width: 40%; 
-    height: 90px;
+    height: 100%;
     display: flex;
-    align-items: center; 
+    align-items: flex-start; 
+    flex-direction: column;
+    justify-content: flex-start;
 
     @media(max-width:750px) {
-      margin-top: 10px;
-      margin-bottom: 20px;
+      width: 50%;
+    }
+
+    @media(max-width:560px) {
+      width: 40%;
+    }
+
+    @media(max-width:475px) {
       width: 100%;
-      justify-content: center;
+      align-items: center;
+    }
+`
+
+const PAddress = styled.p`
+    width: 60%;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 20px;
+
+    @media(max-width:475px) {
+      text-align: center;
+      margin-left: 0;
+    }
+`
+
+const Img = styled.img`
+  height: 50px;
+  margin-left: 20px;
+
+  @media(max-width:560px) {
+    height: 30px;
+  }
+
+  @media(max-width:475px) {
+    height: 45px;
+    margin-left: 0;
     }
 `
 
 const LinksDiv = styled.div`
     width: 30%; 
-    height: 90px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
     @media(max-width:750px) {
-     margin-bottom: 30px;
-     width: 40%; 
+     width: 25%; 
+    }
+
+    @media(max-width:560px) {
+      width: 30%;
+    }
+
+    @media(max-width:475px) {
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
     }
 `
 
 const ContactDiv = styled.div`
     width: 30%; 
-    height: 90px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
     @media(max-width:750px) {
-     width: 40%; 
+      width: 25%; 
+    }
+
+    @media(max-width:560px) {
+      width: 30%;
+    }
+
+    @media(max-width:475px) {
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
     }
 `
 
@@ -66,7 +120,8 @@ function Footer () {
   return (
     <FooterDiv>
       <LogoDiv>
-        <img src={logo} style={{ height: '50px', marginLeft: '20px' }} />
+        <Img src={logo} />
+        <PAddress>United Nations Building, 11th Floor Rajdamnern Nok Avenue, Bangkok 10200, Thailand</PAddress>
       </LogoDiv>
 
       <LinksDiv>

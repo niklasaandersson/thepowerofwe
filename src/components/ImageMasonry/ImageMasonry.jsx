@@ -103,10 +103,14 @@ const HooverDiv = styled.div`
     @media(max-width:450px) {
       padding: 8px;
     }
-
-  
 `
 
+const TextDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`
 const H5Styled = styled.h5`
   margin-bottom: 0;
   font-weight: 700;
@@ -125,17 +129,23 @@ const SocialDivButton = styled.div`
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  color: white;
-  border: 1px solid #fff;
+  color:#000;
+  background-color: #ffffff8d;
   display: flex;
   justify-content: center;
   margin-right: 10px;
   align-items: center;
+  transition: all 0.2s ease;
+
 
   @media(max-width:567px) {
     height: 20px;
     width: 20px;
-    }
+  }
+
+  &:hover {
+    background-color: #ffffffbb;
+  }
 `
 
 const useWindowSize = () => {
@@ -153,20 +163,27 @@ const useWindowSize = () => {
 export default function ImageMasonry ({ entrepreneurs }) {
   const [allEntrepreneurs, setAllEntrepreneurs] = useState(entrepreneurs)
   const [displayedEntrepreneurs, setDisplayedEntrepreneurs] = useState(entrepreneurs)
+
   const [allCountries, setAllCountries] = useState([])
   const [currentCountry, setCurrentCountry] = useState('')
-  const [allSectors, setAllSectors] = useState([])
+
   const [currentSector, setCurrentSector] = useState('')
+
   const [noOfImages, setNoOfImages] = useState(3)
 
   const size = useWindowSize()
+
   useEffect(() => {
     if (size < 535) setNoOfImages(2)
+    if (size > 534 && size < 1001) setNoOfImages(3)
+    if (size > 1000) setNoOfImages(4)
     else setNoOfImages(3)
   }, [])
 
   useEffect(() => {
     if (size < 535) setNoOfImages(2)
+    if (size > 534 && size < 1001) setNoOfImages(3)
+    if (size > 1000) setNoOfImages(4)
   }, [size])
 
   useEffect(() => {
@@ -180,52 +197,21 @@ export default function ImageMasonry ({ entrepreneurs }) {
       tempAllCountries.reverse()
     }
 
-    const tempAllSectors = entrepreneurs.map(entrepreneurs => entrepreneurs.industry).filter((value, index, self) => self.indexOf(value) === index)
+    if (tempAllCountries.length === 1) setCurrentCountry(tempAllCountries[0])
+    else setCurrentCountry('All Countries')
 
-    if (tempAllSectors.length > 1) {
-      tempAllSectors.sort()
-      tempAllSectors.reverse()
-      tempAllSectors.push('All Sectors')
-      tempAllSectors.reverse()
-    }
-
-    setAllSectors(tempAllSectors)
-    setCurrentSector('All Sectors')
     setAllCountries(tempAllCountries)
-    setCurrentCountry('All Countries')
   }, [])
 
   useEffect(() => {
     if (currentCountry === 'All Countries') {
       setDisplayedEntrepreneurs(allEntrepreneurs)
-      setCurrentSector('All Sectors')
     } else {
       const filtered = allEntrepreneurs.filter(e => e.country === currentCountry)
 
-      const tempAllSectors = filtered.map(entrepreneurs => entrepreneurs.industry).filter((value, index, self) => self.indexOf(value) === index)
-
-      if (tempAllSectors.length > 1) {
-        tempAllSectors.sort()
-        tempAllSectors.reverse()
-        tempAllSectors.push('All Sectors')
-        tempAllSectors.reverse()
-      }
-
       setDisplayedEntrepreneurs(filtered)
-      setAllSectors(tempAllSectors)
-      setCurrentSector('All Sectors')
     }
   }, [currentCountry])
-
-  useEffect(() => {
-    if (currentSector === 'All Sectors') {
-      if (currentCountry === 'All Countries') setDisplayedEntrepreneurs(allEntrepreneurs)
-      else setDisplayedEntrepreneurs(displayedEntrepreneurs.filter(e => e.country === currentCountry))
-    } else {
-      if (currentCountry === 'All Countries') setDisplayedEntrepreneurs(allEntrepreneurs.filter(e => e.industry === currentSector))
-      else setDisplayedEntrepreneurs(displayedEntrepreneurs.filter(e => e.country === currentCountry && e.industry === currentSector))
-    }
-  }, [currentSector])
 
   return (
     <>
@@ -254,26 +240,6 @@ export default function ImageMasonry ({ entrepreneurs }) {
               </div>
 
             </div>
-
-            <div className='dropdown' style={{ marginRight: '8px' }}>
-              <Tooltip title='Filter by sector' placement='top-end'>
-                <button
-                  className='btn btn-outline-light dropdown-toggle'
-                  type='button' id='dropdownMenuButton'
-                  data-toggle='dropdown'
-                  aria-haspopup='true'
-                  aria-expanded='false'
-                >
-                  {currentSector}
-                </button>
-              </Tooltip>
-              <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                {allSectors.map(s => (
-                  <button key={s} className='dropdown-item' onClick={() => setCurrentSector(s)}>{s}</button>
-                ))}
-              </div>
-
-            </div>
           </div>
 
           <Box sx={{ marginBottom: '150px' }}>
@@ -291,12 +257,11 @@ export default function ImageMasonry ({ entrepreneurs }) {
                       />
                     </div>
                     <HooverDiv>
-                      <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+                      <TextDiv>
                         <H5Styled>{`${item.firstName} ${item.lastName} `}{getFlag(item.country)}</H5Styled>
                         <span>{item.companyName}</span>
                         <span>{item.industry}</span>
-
-                      </div>
+                      </TextDiv>
                       <SocialDiv>
                         {item.website &&
                           <Tooltip title='Website' placement='top-end'>
