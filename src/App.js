@@ -37,7 +37,7 @@ function App () {
       <div className='App'>
         <Logo />
         <ContentDiv>
-          {process.env.REACT_APP_COMING_SOON
+          {process.env.REACT_APP_COMING_SOON === 1
             ? <ComingSoon />
             : <>
               <Hero />
