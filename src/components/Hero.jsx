@@ -2,9 +2,10 @@ import React from 'react'
 import { H1Date } from './ComingSoon/ComingSoon'
 import logo from './asset.png'
 import Tooltip from '@mui/material/Tooltip'
-import { FlagSpan } from './ImageMasonry/ImageMasonry'
+
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
+import { Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand, Vietnam } from './Flags'
 
 const H1 = styled.h1`
   font-size: 2.2rem;
@@ -25,6 +26,10 @@ const H1 = styled.h1`
   
 `
 
+const FlagContainer = styled.div`
+  display: inline-block;
+`
+
 function Hero () {
   const urlParams = new URLSearchParams(window.location.search)
   const success = urlParams.get('success')
@@ -32,7 +37,7 @@ function Hero () {
   return (
     <>
       <div>
-        <img src={logo} style={{ height: '250px' }} />
+        <img src={logo} style={{ height: '200px' }} />
       </div>
       <div style={{ marginTop: '30px' }}>
         <H1>The Power of WE: Connecting Women</H1>
@@ -40,51 +45,73 @@ function Hero () {
 
       </div>
       <H1Date>Jan 6 2022</H1Date>
-      <p style={{ marginBottom: '5px' }}><small>Click on your contry's flag to see start time</small></p>
-      <div style={{ marginLeft: '5px' }}>
+      <p style={{ marginBottom: '10px', color: '#7c0842' }}><small>Click on your country's flag to see start time</small></p>
+
+      <div>
+
         <Tooltip title='Brunei 3pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='brunei'>🇧🇳</FlagSpan>
+          <FlagContainer>
+            <Brunei />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Cambodia 2pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='cambodia'>🇰🇭</FlagSpan>
+          <FlagContainer>
+            <Cambodia />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Indonesia 2pm' placement='top-end'>
-          <FlagSpan role='img' data-tip='hello world' aria-label='indonesia'>🇮🇩</FlagSpan>
+          <FlagContainer>
+            <Indonesia />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Laos 2pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='laos'>🇱🇦</FlagSpan>
+          <FlagContainer>
+            <Laos />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Malaysia 3pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='malaysia'>🇲🇾</FlagSpan>
+          <FlagContainer>
+            <Malaysia />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Myanmar 1:30pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='myanmar'>🇲🇲</FlagSpan>
+          <FlagContainer>
+            <Myanmar />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Philippines 3pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='philippines'>🇵🇭</FlagSpan>
+          <FlagContainer>
+            <Philippines />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Singapore 3pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='singapore'>🇸🇬</FlagSpan>
+          <FlagContainer>
+            <Singapore />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Thailand 2pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='thailand'>🇹🇭</FlagSpan>
+          <FlagContainer>
+            <Thailand />
+          </FlagContainer>
         </Tooltip>
 
         <Tooltip title='Viet Nam 2pm' placement='top-end'>
-          <FlagSpan role='img' aria-label='viet Nam'>🇻🇳</FlagSpan>
+          <FlagContainer>
+            <Vietnam />
+          </FlagContainer>
         </Tooltip>
 
       </div>
 
-      <div className='btn-group' role='group' aria-label='Basic example' style={{ marginTop: '10px' }}>
+      <div className='btn-group' role='group' aria-label='Basic example' style={{ marginTop: '25px' }}>
         <Link to='agenda' spy smooth offset={-30}>
           <button
             type='button'

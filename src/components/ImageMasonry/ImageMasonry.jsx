@@ -5,76 +5,72 @@ import Masonry from '@mui/lab/Masonry'
 import Tooltip from '@mui/material/Tooltip'
 import styled from 'styled-components'
 import { FaDesktop, FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand, Vietnam } from '../Flags'
 
 const getFlag = (countryName) => {
   switch (countryName) {
     case 'Brunei':
       return (
         <Tooltip title='Brunei'>
-          <FlagSpan role='img' aria-label='brunei'>🇧🇳</FlagSpan>
+          <Brunei />
         </Tooltip>
       )
     case 'Cambodia':
       return (
         <Tooltip title='Cambodia'>
-          <FlagSpan role='img' aria-label='cambodia'>🇰🇭</FlagSpan>
+          <Cambodia />
         </Tooltip>
       )
     case 'Indonesia':
       return (
         <Tooltip title='Indonesia'>
-          <FlagSpan role='img' data-tip='hello world' aria-label='indonesia'>🇮🇩</FlagSpan>
+          <Indonesia />
         </Tooltip>
       )
     case 'Laos':
       return (
         <Tooltip title='Laos'>
-          <FlagSpan role='img' aria-label='laos'>🇱🇦</FlagSpan>
+          <Laos />
         </Tooltip>
       )
     case 'Malaysia':
       return (
         <Tooltip title='Malaysia'>
-          <FlagSpan role='img' aria-label='malaysia'>🇲🇾</FlagSpan>
+          <Malaysia />
         </Tooltip>
       )
     case 'Myanmar':
       return (
         <Tooltip title='Myanmar'>
-          <FlagSpan role='img' aria-label='myanmar'>🇲🇲</FlagSpan>
+          <Myanmar />
         </Tooltip>
       )
     case 'Philippines':
       return (
         <Tooltip title='Philippines'>
-          <FlagSpan role='img' aria-label='philippines'>🇵🇭</FlagSpan>
+          <Philippines />
         </Tooltip>
       )
     case 'Singapore':
       return (
         <Tooltip title='Singapore'>
-          <FlagSpan role='img' aria-label='singapore'>🇸🇬</FlagSpan>
+          <Singapore />
         </Tooltip>
       )
     case 'Thailand':
       return (
         <Tooltip title='Thailand'>
-          <FlagSpan role='img' aria-label='thailand'>🇹🇭</FlagSpan>
+          <Thailand />
         </Tooltip>
       )
     case 'Viet Nam':
       return (
         <Tooltip title='Viet Nam'>
-          <FlagSpan role='img' aria-label='viet Nam'>🇻🇳</FlagSpan>
+          <Vietnam />
         </Tooltip>
       )
   }
 }
-
-export const FlagSpan = styled.span`
-  font-size: 24px;
-  margin-right: 10px;
-`
 
 const HooverDiv = styled.div`
     position: absolute;
@@ -219,7 +215,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
       {entrepreneurs.length === 0
         ? <p>Sign up for the event to be the first entrepreneur to be featured here.</p>
         : <>
-          <div style={{ display: 'flex', marginBottom: '20px' }}>
+          <div style={{ display: 'flex', marginBottom: '20px', justifyContent: 'center' }}>
 
             <div className='dropdown' style={{ marginRight: '8px' }}>
               <Tooltip title='Filter by country' placement='top-end'>
@@ -242,7 +238,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
             </div>
           </div>
 
-          <Box sx={{ marginBottom: '150px' }}>
+          <Box sx style={{ margin: '0 auto 150px auto' }}>
             <Masonry columns={noOfImages} spacing={1}>
               {displayedEntrepreneurs.map((item, index) => (
                 <Stack key={item._id}>

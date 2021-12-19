@@ -72,6 +72,7 @@ export const H1Date = styled(H1)`
   color: rgb(42,47,184);
   font-weight: 700;
   margin-top: 15px;
+  padding: 10px;
 `
 
 function ComingSoon () {
@@ -93,9 +94,9 @@ function ComingSoon () {
             type='button'
             className='btn btn-success'
             style={{ borderRadius: '8px', marginTop: '20px' }}
-            >
+          >
           You are signed up
-          </button>
+            </button>
 
           : <>
             <a href='https://form.jotform.com/213346215659054'>
@@ -107,7 +108,7 @@ function ComingSoon () {
           Sign up for the event
               </button>
             </a>
-          </>}
+            </>}
 
       </TextDiv>
     </ContentDiv>

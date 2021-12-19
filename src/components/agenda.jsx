@@ -6,6 +6,8 @@ const StyledUl = styled.ul`
   display: flex;
   flex-direction: column;
   padding-inline-start: 0;
+  max-width: 450px;
+  margin: 0 auto;
 `
 
 const StyledLi = styled.li`
