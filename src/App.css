@@ -19,3 +19,8 @@ h1 {
   color: white;
   background-color: #d81377;
 }
+
+.flag.size-l {
+  width: 24px !important;
+  height: 18px !important;
+}

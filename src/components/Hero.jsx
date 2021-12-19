@@ -16,13 +16,12 @@ const H1 = styled.h1`
     font-size: 1.8rem;
   }
 
-  @media(max-width: 450px) {
-    font-size: 1.2rem;
-    font-weight: 700;
+  @media(max-width: 520px) {
+    font-size: 1.5rem;
   }
 
-  @media(max-width: 355px) {
-    font-size: 1.1rem;
+  @media(max-width: 430px) {
+    font-size: 1.2rem;
     font-weight: 700;
   }
   
