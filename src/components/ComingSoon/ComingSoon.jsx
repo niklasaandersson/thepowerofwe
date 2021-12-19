@@ -77,7 +77,6 @@ export const H1Date = styled(H1)`
 function ComingSoon () {
   const urlParams = new URLSearchParams(window.location.search)
   const success = urlParams.get('success')
-  console.log(success)
 
   return (
     <ContentDiv>

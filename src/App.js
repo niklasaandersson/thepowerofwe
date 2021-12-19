@@ -20,7 +20,6 @@ const ContentDiv = styled.div`
 function App () {
   const [entrepreneurs, setEntrepreneurs] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [comingSoon, setComingSoon] = useState(true)
 
   useEffect(() => {
     const getM = async () => {
@@ -36,13 +35,13 @@ function App () {
       <div className='App'>
         <Logo />
         <ContentDiv>
-          {comingSoon === true
+          {process.env.REACT_APP_COMING_SOON === true
             ? <ComingSoon />
             : <>
               <Hero />
               <Agenda />
               {isLoading ? null : <MeetTheEntrepreneurs entrepreneurs={entrepreneurs} />}
-              </>}
+            </>}
         </ContentDiv>
 
         <Footer />
