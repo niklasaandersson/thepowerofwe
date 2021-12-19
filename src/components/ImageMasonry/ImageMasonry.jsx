@@ -237,7 +237,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
 
             </div>
           </div>
-          <div style={{ minHeight: '400px', maxWidth: '900px', margin: '0 auto 150px auto' }}>
+          <div style={{ minHeight: '400px', maxWidth: '900px', margin: '0 auto 80px auto' }}>
             <Box>
               <Masonry columns={noOfImages} spacing={2}>
                 {displayedEntrepreneurs.map((item, index) => (
@@ -293,7 +293,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
               </Masonry>
             </Box>
           </div>
-        </>}
+          </>}
     </>
 
   )
