@@ -4,6 +4,7 @@ import logo from './asset.png'
 import Tooltip from '@mui/material/Tooltip'
 import { FlagSpan } from './ImageMasonry/ImageMasonry'
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 const H1 = styled.h1`
   font-size: 2.2rem;
@@ -84,7 +85,7 @@ function Hero () {
       </div>
 
       <div className='btn-group' role='group' aria-label='Basic example' style={{ marginTop: '10px' }}>
-        <a href='#agenda'>
+        <Link to='agenda' spy smooth offset={-30}>
           <button
             type='button'
             className='btn btn-outline-light'
@@ -92,7 +93,8 @@ function Hero () {
           >
             See The Agenda
           </button>
-        </a>
+        </Link>
+
         {success === true
           ? <button
             type='button'
@@ -114,8 +116,7 @@ function Hero () {
               </button>
             </a>
             </>}
-
-        <a href='#meetTheEntrepreneurs'>
+        <Link to='meetTheEntrepreneurs' spy smooth offset={-30}>
           <button
             type='button'
             className='btn btn-outline-light'
@@ -123,7 +124,8 @@ function Hero () {
           >
               Meet The Entrepreneurs
           </button>
-        </a>
+        </Link>
+
       </div>
 
     </>

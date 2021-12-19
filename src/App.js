@@ -41,9 +41,9 @@ function App () {
             ? <ComingSoon />
             : <>
               <Hero />
-              <Agenda />
-              <MeetTheEntrepreneurs entrepreneurs={entrepreneurs} isLoading={isLoading} />
-              </>}
+              <Agenda id='agenda' />
+              <MeetTheEntrepreneurs id='meetTheEntrepreneurs' entrepreneurs={entrepreneurs} isLoading={isLoading} />
+            </>}
         </ContentDiv>
 
         <Footer />
