@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
-import Masonry from '@mui/lab/Masonry'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import Tooltip from '@mui/material/Tooltip'
 import styled from 'styled-components'
 import { FaDesktop, FaFacebookF, FaInstagram } from 'react-icons/fa'
@@ -145,14 +143,14 @@ const SocialDivButton = styled.div`
 `
 
 const useWindowSize = () => {
-  const [windowWidth, setWindowWidth] = useState(undefined)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
     handleResize()
     return () => window.removeEventListener('resize', handleResize)
-  }, []) // Empty array ensures that effect is only run on mount
+  }, [])
   return windowWidth
 }
 
@@ -163,11 +161,15 @@ export default function ImageMasonry ({ entrepreneurs }) {
   const [allCountries, setAllCountries] = useState([])
   const [currentCountry, setCurrentCountry] = useState('')
 
-  const [noOfImages, setNoOfImages] = useState(3)
+  const [allSectors, setAllSectors] = useState([])
+  const [currentSector, setCurrentSector] = useState('')
 
+  const [noOfImages, setNoOfImages] = useState(3)
+  console.log(noOfImages)
   let size = 0
   size = useWindowSize()
 
+  /*
   useEffect(() => {
     const windowSetSize = (w) => {
       if (w < 535) setNoOfImages(2)
@@ -176,11 +178,14 @@ export default function ImageMasonry ({ entrepreneurs }) {
     }
     windowSetSize(size)
   }, [size])
+*/
 
   useEffect(() => {
     setDisplayedEntrepreneurs(entrepreneurs)
 
     const tempAllCountries = entrepreneurs.map(entrepreneurs => entrepreneurs.country).filter((value, index, self) => self.indexOf(value) === index)
+    const tempAllSectors = entrepreneurs.map(entrepreneurs => entrepreneurs.industry).filter((value, index, self) => self.indexOf(value) === index)
+
     if (tempAllCountries.length > 1) {
       tempAllCountries.sort()
       tempAllCountries.reverse()
@@ -188,21 +193,73 @@ export default function ImageMasonry ({ entrepreneurs }) {
       tempAllCountries.reverse()
     }
 
+    if (tempAllSectors.length > 1) {
+      tempAllSectors.sort()
+      tempAllSectors.reverse()
+      tempAllSectors.push('All Sectors')
+      tempAllSectors.reverse()
+    }
+
     if (tempAllCountries.length === 1) setCurrentCountry(tempAllCountries[0])
     else setCurrentCountry('All Countries')
 
+    if (tempAllSectors.length === 1) setCurrentSector(tempAllSectors[0])
+    else setCurrentSector('All Sectors')
+
     setAllCountries(tempAllCountries)
+    setAllSectors(tempAllSectors)
   }, [])
 
   useEffect(() => {
     if (currentCountry === 'All Countries') {
       setDisplayedEntrepreneurs(allEntrepreneurs)
+      const tempAllSectors = entrepreneurs.map(entrepreneurs => entrepreneurs.industry).filter((value, index, self) => self.indexOf(value) === index)
+      if (tempAllSectors.length > 1) {
+        tempAllSectors.sort()
+        tempAllSectors.reverse()
+        tempAllSectors.push('All Sectors')
+        tempAllSectors.reverse()
+      }
+      setAllSectors(tempAllSectors)
+      if (tempAllSectors.length === 1) setCurrentSector(tempAllSectors[0])
+      else setCurrentSector('All Sectors')
     } else {
       const filtered = allEntrepreneurs.filter(e => e.country === currentCountry)
+      const tempAllSectors = filtered.map(entrepreneurs => entrepreneurs.industry).filter((value, index, self) => self.indexOf(value) === index)
+
+      if (tempAllSectors.length > 1) {
+        tempAllSectors.sort()
+        tempAllSectors.reverse()
+        tempAllSectors.push('All Sectors')
+        tempAllSectors.reverse()
+      }
+
+      setAllSectors(tempAllSectors)
+      if (tempAllSectors.length === 1) setCurrentSector(tempAllSectors[0])
+      else setCurrentSector('All Sectors')
 
       setDisplayedEntrepreneurs(filtered)
     }
   }, [currentCountry])
+
+  useEffect(() => {
+    if (currentCountry === 'All Countries' && currentSector === 'All Sectors') {
+      setDisplayedEntrepreneurs(entrepreneurs)
+    }
+
+    if (currentCountry === 'All Countries' && currentSector !== 'All Sectors') {
+      const filtered = entrepreneurs.filter(e => e.industry === currentSector)
+      setDisplayedEntrepreneurs(filtered)
+    }
+    if (currentCountry !== 'All Countries' && currentSector !== 'All Sectors') {
+      const filtered = entrepreneurs.filter(e => e.industry === currentSector && e.country === currentCountry)
+      setDisplayedEntrepreneurs(filtered)
+    }
+    if (currentCountry !== 'All Countries' && currentSector === 'All Sectors') {
+      const filtered = entrepreneurs.filter(e => e.country === currentCountry)
+      setDisplayedEntrepreneurs(filtered)
+    }
+  }, [currentSector])
 
   return (
     <>
@@ -231,62 +288,80 @@ export default function ImageMasonry ({ entrepreneurs }) {
               </div>
 
             </div>
-          </div>
-          <div style={{ minHeight: '400px', maxWidth: '900px', margin: '0 auto 80px auto', paddingLeft: '10px' }}>
-            <Box>
-              <Masonry columns={noOfImages} spacing={2}>
-                {displayedEntrepreneurs.map((item, index) => (
-                  <Stack key={item._id}>
-                    <div style={{ position: 'relative' }}>
-                      <div>
-                        <img
-                          src={`${item.imageURL}?w=162&auto=format`}
-                          srcSet={`${item.imageURL}?w=162&auto=format&dpr=2 2x`}
-                          alt={item.title}
-                          loading='lazy'
-                          style={{ borderRadius: '8px', width: '100%' }}
-                        />
-                      </div>
-                      <HooverDiv>
-                        <TextDiv>
-                          <H5Styled>{`${item.firstName} ${item.lastName} `}{getFlag(item.country)}</H5Styled>
-                          <span>{item.companyName}</span>
-                          <span>{item.industry}</span>
-                        </TextDiv>
-                        <SocialDiv>
-                          {item.website &&
-                            <Tooltip title='Website' placement='top-end'>
-                              <a href={'//' + item.website} target='_blank' rel='noopener noreferrer'>
-                                <SocialDivButton>
-                                  <FaDesktop />
-                                </SocialDivButton>
-                              </a>
-                            </Tooltip>}
 
-                          {item.facebook &&
-                            <Tooltip title='Facebook' placement='top-end'>
-                              <a href={'//' + item.facebook} target='_blank' rel='noopener noreferrer'>
-                                <SocialDivButton>
-                                  <FaFacebookF />
-                                </SocialDivButton>
-                              </a>
-                            </Tooltip>}
-
-                          {item.instagram &&
-                            <Tooltip title='Instagram' placement='top-end'>
-                              <a href={'//' + item.instagram} target='_blank' rel='noopener noreferrer'>
-                                <SocialDivButton>
-                                  <FaInstagram />
-                                </SocialDivButton>
-                              </a>
-                            </Tooltip>}
-                        </SocialDiv>
-                      </HooverDiv>
-                    </div>
-                  </Stack>
+            <div className='dropdown'>
+              <Tooltip title='Filter by sector' placement='top-end'>
+                <button
+                  className='btn btn-outline-light dropdown-toggle'
+                  type='button' id='dropdownMenuButton'
+                  data-toggle='dropdown'
+                  aria-haspopup='true'
+                  aria-expanded='false'
+                >
+                  {currentSector}
+                </button>
+              </Tooltip>
+              <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+                {allSectors.map(s => (
+                  <button key={s} className='dropdown-item' onClick={() => setCurrentSector(s)}>{s}</button>
                 ))}
-              </Masonry>
-            </Box>
+              </div>
+
+            </div>
+          </div>
+          <div style={{ maxWidth: '900px', margin: '0 auto 80px auto', paddingLeft: '10px' }}>
+
+            <Masonry>
+              {displayedEntrepreneurs.map((item, index) => (
+                <div key={item._id} style={{ width: '100%', display: 'block', padding: '3px' }}>
+                  <div style={{ position: 'relative' }}>
+                    <div>
+                      <img
+                        src={`${item.imageURL}?w=162&auto=format`}
+                        srcSet={`${item.imageURL}?w=162&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading='lazy'
+                        style={{ borderRadius: '8px', width: '100%' }}
+                      />
+                    </div>
+                    <HooverDiv>
+                      <TextDiv>
+                        <H5Styled>{`${item.firstName} ${item.lastName} `}{getFlag(item.country)}</H5Styled>
+                        <span>{item.companyName}</span>
+                        <span>{item.industry}</span>
+                      </TextDiv>
+                      <SocialDiv>
+                        {item.website &&
+                          <Tooltip title='Website' placement='top-end'>
+                            <a href={'//' + item.website} target='_blank' rel='noopener noreferrer'>
+                              <SocialDivButton>
+                                <FaDesktop />
+                              </SocialDivButton>
+                            </a>
+                          </Tooltip>}
+
+                        {item.facebook &&
+                          <Tooltip title='Facebook' placement='top-end'>
+                            <a href={'//' + item.facebook} target='_blank' rel='noopener noreferrer'>
+                              <SocialDivButton>
+                                <FaFacebookF />
+                              </SocialDivButton>
+                            </a>
+                          </Tooltip>}
+
+                        {item.instagram &&
+                          <Tooltip title='Instagram' placement='top-end'>
+                            <a href={'//' + item.instagram} target='_blank' rel='noopener noreferrer'>
+                              <SocialDivButton>
+                                <FaInstagram />
+                              </SocialDivButton>
+                            </a>
+                          </Tooltip>}
+                      </SocialDiv>
+                    </HooverDiv>
+                  </div>
+                </div>))}
+            </Masonry>
           </div>
           </>}
     </>
