@@ -34,6 +34,7 @@ const FlagContainer = styled.div`
 function Hero () {
   const urlParams = new URLSearchParams(window.location.search)
   const success = urlParams.get('success')
+  console.log(success)
 
   return (
     <>
@@ -123,15 +124,15 @@ function Hero () {
           </button>
         </Link>
 
-        {success === true
+        {success
           ? <button
             type='button'
-            className='btn btn-outline-success'
-            style={{ borderRadius: 0 }}
+            className='btn btn-success'
+            style={{ borderRadius: 0, opacity: 1 }}
             disabled
-          >
+            >
           You are signed up
-            </button>
+          </button>
 
           : <>
             <a href='https://form.jotform.com/213346215659054'>
@@ -143,7 +144,7 @@ function Hero () {
           Sign up for the event
               </button>
             </a>
-            </>}
+          </>}
         <Link to='meetTheEntrepreneurs' spy smooth offset={-30}>
           <button
             type='button'

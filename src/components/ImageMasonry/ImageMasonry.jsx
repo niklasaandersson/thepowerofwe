@@ -142,18 +142,6 @@ const SocialDivButton = styled.div`
   }
 `
 
-const useWindowSize = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth)
-    window.addEventListener('resize', handleResize)
-    handleResize()
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-  return windowWidth
-}
-
 export default function ImageMasonry ({ entrepreneurs }) {
   const [allEntrepreneurs, setAllEntrepreneurs] = useState(entrepreneurs)
   const [displayedEntrepreneurs, setDisplayedEntrepreneurs] = useState(entrepreneurs)
@@ -163,11 +151,6 @@ export default function ImageMasonry ({ entrepreneurs }) {
 
   const [allSectors, setAllSectors] = useState([])
   const [currentSector, setCurrentSector] = useState('')
-
-  const [noOfImages, setNoOfImages] = useState(3)
-  console.log(noOfImages)
-  let size = 0
-  size = useWindowSize()
 
   /*
   useEffect(() => {
@@ -363,7 +346,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
                 </div>))}
             </Masonry>
           </div>
-          </>}
+        </>}
     </>
 
   )

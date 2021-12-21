@@ -135,11 +135,11 @@ function Footer () {
         <h5 style={{ fontWeight: '700' }}>Contact us</h5>
         <a href='mailto:' style={{ color: 'rgb(42,47,184)' }}>
           <span><FaEnvelope /></span>
-          <span> xxx@ilo.org</span>
+          <span style={{ marginLeft: '5px' }}>rebuildingbetter@ilo.org</span>
         </a>
         <a href='tel:00662881234' style={{ color: 'rgb(42,47,184)' }}>
           <span><FaPhone /></span>
-          <span> +662 288 1234</span>
+          <span style={{ marginLeft: '5px' }}>+662 288 1234</span>
         </a>
       </ContactDiv>
 
