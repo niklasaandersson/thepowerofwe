@@ -5,7 +5,7 @@ import { FaEnvelope, FaPhone } from 'react-icons/fa'
 
 const FooterDiv = styled.div`
     font-size: 14px;
-    background-color: #dd3086;
+    background-color: #b91d73;
     width: 100%;
     padding: 50px 10px 10px 10px;
     display: flex;
