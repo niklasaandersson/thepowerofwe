@@ -43,11 +43,11 @@ function App () {
               <Hero />
               <Agenda id='agenda' />
               <MeetTheEntrepreneurs id='meetTheEntrepreneurs' entrepreneurs={entrepreneurs} isLoading={isLoading} />
-            </>}
+              </>}
         </ContentDiv>
 
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }

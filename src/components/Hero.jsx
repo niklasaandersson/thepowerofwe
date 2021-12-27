@@ -46,66 +46,65 @@ function Hero () {
         <H1>Entrepreneurs in South-East Asia</H1>
 
       </div>
-      <H1Date>Jan 6 2022</H1Date>
-      <p className='p' style={{ marginBottom: '10px' }}><small>Click on your country's flag to see start time</small></p>
+      <H1Date>20 January 2022</H1Date>
+      <p className='p' style={{ marginBottom: '10px' }}><small>Click on your country's flag to see time for the event</small></p>
 
-      <div>
-
-        <Tooltip title='Brunei 3pm' placement='top-end'>
+      <div style={{ marginBottom: '40px' }}>
+        <Tooltip title='Brunei 3 - 5.30pm' placement='top-end'>
           <FlagContainer>
             <Brunei />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Cambodia 2pm' placement='top-end'>
+        <Tooltip title='Cambodia 2 - 4.30pm' placement='top-end'>
           <FlagContainer>
             <Cambodia />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Indonesia 2pm' placement='top-end'>
+        <Tooltip title='Indonesia 2 - 4.30pm' placement='top-end'>
           <FlagContainer>
             <Indonesia />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Laos 2pm' placement='top-end'>
+        <Tooltip title='Laos 2 - 4.30pm' placement='top-end'>
           <FlagContainer>
             <Laos />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Malaysia 3pm' placement='top-end'>
+        <Tooltip title='Malaysia 3 - 5.30pm' placement='top-end'>
           <FlagContainer>
             <Malaysia />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Myanmar 1:30pm' placement='top-end'>
+        <Tooltip title='Myanmar 1:30 - 4pm' placement='top-end'>
           <FlagContainer>
             <Myanmar />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Philippines 3pm' placement='top-end'>
+        <Tooltip title='Philippines 3 - 5.30pm' placement='top-end'>
           <FlagContainer>
             <Philippines />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Singapore 3pm' placement='top-end'>
+        <Tooltip title='Singapore 3 - 5.30pm' placement='top-end'>
           <FlagContainer>
             <Singapore />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Thailand 2pm' placement='top-end'>
+        <Tooltip title='Thailand 2 - 4.30pm' placement='top-end'>
           <FlagContainer>
             <Thailand />
           </FlagContainer>
         </Tooltip>
 
-        <Tooltip title='Viet Nam 2pm' placement='top-end'>
+        <Tooltip title='Viet Nam 2 - 4.30pm' placement='top-end'>
           <FlagContainer>
             <Vietnam />
           </FlagContainer>
@@ -113,12 +112,12 @@ function Hero () {
 
       </div>
 
-      <div className='btn-group' role='group' aria-label='Basic example' style={{ marginTop: '25px' }}>
+      <div style={{ marginTop: '25px', margin: '10px' }}>
         <Link to='agenda' spy smooth offset={-30}>
           <button
             type='button'
             className='btn btn-outline-light'
-            style={{ borderRadius: 0, borderBottomLeftRadius: '0.25rem', borderTopLeftRadius: '0.25rem', marginRight: 0 }}
+            style={{ borderRadius: '0.25rem', margin: '4px' }}
           >
             See The Agenda
           </button>
@@ -128,28 +127,28 @@ function Hero () {
           ? <button
             type='button'
             className='btn btn-success'
-            style={{ borderRadius: 0, opacity: 1 }}
+            style={{ borderRadius: '0.25rem', opacity: 1, margin: '4px' }}
             disabled
-            >
+          >
           You are signed up
-          </button>
+            </button>
 
           : <>
             <a href='https://form.jotform.com/213346215659054'>
               <button
                 type='button'
                 className='btn btn-outline-light'
-                style={{ borderRadius: 0 }}
+                style={{ borderRadius: '0.25rem', margin: '4px' }}
               >
           Sign up for the event
               </button>
             </a>
-          </>}
+            </>}
         <Link to='meetTheEntrepreneurs' spy smooth offset={-30}>
           <button
             type='button'
             className='btn btn-outline-light'
-            style={{ borderBottomRightRadius: '0.25rem', borderTopRightRadius: '0.25rem', borderTopLeftRadius: 0, borderBottomLeftRadius: 0, marginLeft: -1 }}
+            style={{ borderRadius: '0.25rem', margin: '4px' }}
           >
               Meet The Entrepreneurs
           </button>

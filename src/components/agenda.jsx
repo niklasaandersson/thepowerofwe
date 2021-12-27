@@ -12,7 +12,7 @@ const StyledUl = styled.ul`
 
 const StyledLi = styled.li`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 20px;
@@ -23,20 +23,15 @@ const StyledLi = styled.li`
   
 `
 
-const StyledLiTitle = styled.span`
-  width: 50%;
-  text-align: left;
-`
-
 function Agenda () {
   return (
     <div>
       <SectorTitle id='agenda'>Agenda</SectorTitle>
       <StyledUl>
-        <StyledLi><StyledLiTitle>2:00 - 2:25pm</StyledLiTitle><span>Opening Session</span></StyledLi>
-        <StyledLi><StyledLiTitle>2:25 - 3:00pm</StyledLiTitle><span>WE Discussions</span></StyledLi>
-        <StyledLi><StyledLiTitle>3:00 - 4:20pm</StyledLiTitle><span>WE Speed networking</span></StyledLi>
-        <StyledLi><StyledLiTitle>4:20 - 4:30pm</StyledLiTitle><span>Closing Remarks</span></StyledLi>
+        <StyledLi><span>Opening Session</span></StyledLi>
+        <StyledLi><span>WE Discussions</span></StyledLi>
+        <StyledLi><span>WE Speed networking</span></StyledLi>
+        <StyledLi><span>Closing Remarks</span></StyledLi>
       </StyledUl>
     </div>
   )
