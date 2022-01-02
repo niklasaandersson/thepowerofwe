@@ -2,6 +2,7 @@ import React from 'react'
 import { H1Date } from './ComingSoon/ComingSoon'
 import logo from './asset.png'
 import Tooltip from '@mui/material/Tooltip'
+import moment from 'moment'
 
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
@@ -46,8 +47,10 @@ function Hero () {
         <H1>Entrepreneurs in South-East Asia</H1>
 
       </div>
-      <H1Date>20 January 2022</H1Date>
-      <p className='p' style={{ marginBottom: '10px' }}><small>Click on your country's flag to see time for the event</small></p>
+      <H1Date>{moment('2022-01-20T14:00:00').format('LT, DD MMMM YYYY')}</H1Date>
+
+      {/*
+        <p className='p' style={{ marginBottom: '10px' }}><small>Click on your country's flag to see time for the event</small></p>
 
       <div style={{ marginBottom: '40px' }}>
         <Tooltip title='Brunei 3 - 5.30pm' placement='top-end'>
@@ -109,8 +112,8 @@ function Hero () {
             <Vietnam />
           </FlagContainer>
         </Tooltip>
-
       </div>
+      */}
 
       <div style={{ marginTop: '25px', margin: '10px' }}>
         <Link to='agenda' spy smooth offset={-30}>
