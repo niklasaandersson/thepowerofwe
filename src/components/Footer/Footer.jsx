@@ -15,9 +15,13 @@ const FooterDiv = styled.div`
     font-weight: 300;
     height: 230px;
 
+    @media(max-width:560px) {
+      height: 280px;
+    }
+
     @media(max-width:475px) {
       flex-direction: column;
-      height: 400px;
+      height: 420px;
     }
 
 `
