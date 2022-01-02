@@ -36,7 +36,11 @@ function Hero () {
   const urlParams = new URLSearchParams(window.location.search)
   const success = urlParams.get('success')
   console.log(success)
-
+  const date = new Date()
+  date.setFullYear(2022, 1, 20)
+  date.setUTCHours(7)
+  date.setMinutes(0)
+  date.setSeconds(0)
   return (
     <>
       <div>
@@ -47,73 +51,7 @@ function Hero () {
         <H1>Entrepreneurs in South-East Asia</H1>
 
       </div>
-      <H1Date>{moment('2022-01-20T14:00:00').format('LT, DD MMMM YYYY')}</H1Date>
-
-      {/*
-        <p className='p' style={{ marginBottom: '10px' }}><small>Click on your country's flag to see time for the event</small></p>
-
-      <div style={{ marginBottom: '40px' }}>
-        <Tooltip title='Brunei 3 - 5.30pm' placement='top-end'>
-          <FlagContainer>
-            <Brunei />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Cambodia 2 - 4.30pm' placement='top-end'>
-          <FlagContainer>
-            <Cambodia />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Indonesia 2 - 4.30pm' placement='top-end'>
-          <FlagContainer>
-            <Indonesia />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Laos 2 - 4.30pm' placement='top-end'>
-          <FlagContainer>
-            <Laos />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Malaysia 3 - 5.30pm' placement='top-end'>
-          <FlagContainer>
-            <Malaysia />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Myanmar 1:30 - 4pm' placement='top-end'>
-          <FlagContainer>
-            <Myanmar />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Philippines 3 - 5.30pm' placement='top-end'>
-          <FlagContainer>
-            <Philippines />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Singapore 3 - 5.30pm' placement='top-end'>
-          <FlagContainer>
-            <Singapore />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Thailand 2 - 4.30pm' placement='top-end'>
-          <FlagContainer>
-            <Thailand />
-          </FlagContainer>
-        </Tooltip>
-
-        <Tooltip title='Viet Nam 2 - 4.30pm' placement='top-end'>
-          <FlagContainer>
-            <Vietnam />
-          </FlagContainer>
-        </Tooltip>
-      </div>
-      */}
+      <H1Date>{moment(date).format('LT, DD MMMM YYYY')}</H1Date>
 
       <div style={{ marginTop: '25px', margin: '10px' }}>
         <Link to='agenda' spy smooth offset={-30}>
@@ -132,9 +70,9 @@ function Hero () {
             className='btn btn-success'
             style={{ borderRadius: '0.25rem', opacity: 1, margin: '4px' }}
             disabled
-          >
+            >
           You are signed up
-            </button>
+          </button>
 
           : <>
             <a href='https://form.jotform.com/213346215659054'>
@@ -146,7 +84,7 @@ function Hero () {
           Sign up for the event
               </button>
             </a>
-            </>}
+          </>}
         <Link to='meetTheEntrepreneurs' spy smooth offset={-30}>
           <button
             type='button'
