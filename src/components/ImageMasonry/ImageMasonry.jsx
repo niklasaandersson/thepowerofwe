@@ -248,7 +248,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
     <>
 
       {entrepreneurs.length === 0
-        ? <p style={{ marginBottom: '50px' }}>Sign up for the event to be the featured here with other women entrepreneurs shortly.</p>
+        ? <p style={{ marginBottom: '80px' }}>Sign up for the event to be the featured here with other women entrepreneurs shortly.</p>
         : <>
           <div style={{ display: 'flex', marginBottom: '20px', justifyContent: 'center' }}>
 
@@ -349,7 +349,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
               </Masonry>
             </ResponsiveMasonry>
           </div>
-          </>}
+        </>}
     </>
 
   )
