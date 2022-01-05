@@ -132,7 +132,7 @@ function Footer () {
       <LinksDiv>
         <h5 style={{ fontWeight: '700' }}>Links</h5>
         <a href='https://www.ilo.org/' style={{ color: '#fff' }}>ILO Asia-Pacific</a>
-        <a href='https://www.asean-bac.org/' style={{ color: '#fff' }}>AWEN</a>
+        <a href='https://www.facebook.com/awenasean/' style={{ color: '#fff' }}>AWEN</a>
         <a href='https://philwen.org/' style={{ color: '#fff' }}>PhilWEN</a>
       </LinksDiv>
 
