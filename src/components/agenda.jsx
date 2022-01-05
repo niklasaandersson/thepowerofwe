@@ -30,7 +30,7 @@ function Agenda () {
       <StyledUl>
         <StyledLi><span>Opening Session</span></StyledLi>
         <StyledLi><span>WE Discussions</span></StyledLi>
-        <StyledLi><span>WE Speed networking</span></StyledLi>
+        <StyledLi><span>WE Speed Networking</span></StyledLi>
         <StyledLi><span>Closing Remarks</span></StyledLi>
       </StyledUl>
     </div>

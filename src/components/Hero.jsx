@@ -47,8 +47,8 @@ function Hero () {
         <img src={logo} style={{ height: '200px' }} />
       </div>
       <div style={{ marginTop: '30px' }}>
-        <H1>The Power of WE: Connecting Women</H1>
-        <H1>Entrepreneurs in South-East Asia</H1>
+        <H1>The Power of WE:  </H1>
+        <H1> Connecting Across ASEAN</H1>
 
       </div>
       <H1Date>{moment(date).format('LT, DD MMMM YYYY')}</H1Date>
@@ -60,7 +60,7 @@ function Hero () {
             className='btn btn-outline-light'
             style={{ borderRadius: '0.25rem', margin: '4px' }}
           >
-            See The Agenda
+            See the agenda
           </button>
         </Link>
 
@@ -91,7 +91,7 @@ function Hero () {
             className='btn btn-outline-light'
             style={{ borderRadius: '0.25rem', margin: '4px' }}
           >
-              Meet The Entrepreneurs
+              Meet the entrepreneurs
           </button>
         </Link>
 
