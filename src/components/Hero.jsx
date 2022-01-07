@@ -37,7 +37,7 @@ function Hero () {
   const success = urlParams.get('success')
   console.log(success)
   const date = new Date()
-  date.setFullYear(2022, 1, 20)
+  date.setFullYear(2022, 2, 24)
   date.setUTCHours(7)
   date.setMinutes(0)
   date.setSeconds(0)
@@ -70,12 +70,12 @@ function Hero () {
             className='btn btn-success'
             style={{ borderRadius: '0.25rem', opacity: 1, margin: '4px' }}
             disabled
-            >
+          >
           You are signed up
-          </button>
+            </button>
 
           : <>
-            <a href='https://form.jotform.com/213346215659054'>
+            <a href='https://form.jotform.com/220042322352438'>
               <button
                 type='button'
                 className='btn btn-outline-light'
@@ -84,7 +84,7 @@ function Hero () {
           Sign up for the event
               </button>
             </a>
-          </>}
+            </>}
         <Link to='meetTheEntrepreneurs' spy smooth offset={-30}>
           <button
             type='button'
