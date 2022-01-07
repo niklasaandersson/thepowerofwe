@@ -1,12 +1,10 @@
 import React from 'react'
 import { H1Date } from './ComingSoon/ComingSoon'
 import logo from './asset.png'
-import Tooltip from '@mui/material/Tooltip'
 import moment from 'moment'
 
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
-import { Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand, Vietnam } from './Flags'
 
 import './Hero.css'
 
@@ -28,16 +26,12 @@ const H1 = styled.h1`
   
 `
 
-const FlagContainer = styled.div`
-  display: inline-block;
-`
-
 function Hero () {
   const urlParams = new URLSearchParams(window.location.search)
   const success = urlParams.get('success')
   console.log(success)
   const date = new Date()
-  date.setFullYear(2022, 2, 24)
+  date.setFullYear(2022, 1, 24)
   date.setUTCHours(7)
   date.setMinutes(0)
   date.setSeconds(0)

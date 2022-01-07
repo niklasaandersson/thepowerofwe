@@ -152,17 +152,6 @@ export default function ImageMasonry ({ entrepreneurs }) {
   const [allSectors, setAllSectors] = useState([])
   const [currentSector, setCurrentSector] = useState('')
 
-  /*
-  useEffect(() => {
-    const windowSetSize = (w) => {
-      if (w < 535) setNoOfImages(2)
-      if (w > 534 && size < 1001) setNoOfImages(3)
-      if (w > 1000) setNoOfImages(4)
-    }
-    windowSetSize(size)
-  }, [size])
-*/
-
   useEffect(() => {
     setDisplayedEntrepreneurs(entrepreneurs)
 
@@ -349,7 +338,7 @@ export default function ImageMasonry ({ entrepreneurs }) {
               </Masonry>
             </ResponsiveMasonry>
           </div>
-        </>}
+          </>}
     </>
 
   )

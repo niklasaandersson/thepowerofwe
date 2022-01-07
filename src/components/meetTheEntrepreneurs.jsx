@@ -10,7 +10,7 @@ function Entrepreneurs ({ entrepreneurs, isLoading }) {
       {isLoading
         ? <div style={{ height: '130px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <CircularProgress color='inherit' />
-          </div>
+        </div>
         : <ImageMasonry entrepreneurs={entrepreneurs} />}
 
     </>
